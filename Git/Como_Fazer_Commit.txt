@@ -1,0 +1,13 @@
+COMANDOS
+
+//Inicia o git(repositório) no seu projeto
+git init
+
+//Adiciona todos os arquivos modificados, ao stage
+git add.
+
+//Cria e descreve um ponto na história
+git commit -m "msg da alteração"
+
+//envia alterações para o repositório remoto
+git push

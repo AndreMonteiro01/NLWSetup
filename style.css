@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box; /* Essa cx é a tela toda.*/
+}
+body{
+  background-color: #09090a;
+  color: white; /* Cor da fonte do titulo.*/
+  height: 100vh; /* Tamanho da altura da tela.*/
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pega todo extensão    de toda largura na cx header, space-between deixa cada elemento em uma ponta da cv header.*/
+  padding: 48px; /* Fazendo uma borda em torno dos elementos.*/
+  position: fixed;
+  
+}
+
+button{
+  padding: 16px 24px; /* Tamanho da cx do botão. O 16px vai ser em cima e embaixo os 24px é nas laterais.*/
+  border-radius: 8px; /* Arredondamento da cx.*/
+  border: 1px solid #8B5CF6; /*1px é tamanho da borda, solid é uma linha continua e a cor em hexadecimal. */
+  background-color: transparent;
+  color: white;
+  display: flex; /* Organizar os elementos*/
+  align-items: center; /* align-items só funciona se tiver o display.*/
+  gap: 12px; /* Espaço entres os elementos o sinal de + e a frase do botão.*/
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 125%;
+  
+}
+
+#form-habits{
+  display: flex;
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits{
+display: flex;
+flex-direction: column;
+margin-top: 65px; /* Alinhando os emojis com os checkbox */
+gap: 24px;
+}
+
+.habit{
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  align-items: center;
+}
+
+.days{
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+  
+}
+
+.day{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div{
+  margin-bottom: 8px;
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  line-height: 125%;
+  color: #A1A1AA;
+  text-align: center;
+}
+
+input{
+  appearance: none; /* Tirando a aparência do checkbox*/
+  -webkit-appearance: none; /* Para alguns navegadores entender.*/
+  width: 64px;
+  height: 64px;
+  border: 2px solid #27272A;
+  border-radius: 8px;
+  background: #18181B;
+}
+
+/* Pseudo-selector*/
+input:checked{
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+}
+
+@media (max-width:570px){ /* De 0px a 570px da tela, a tela menosr do que  570px a tela fica resposinvel*/
+  button div{
+    display: none;/* A letra do botão vai sumir, quando a tela ficar menor do que  570px*/
+    
+  }
+}
+
