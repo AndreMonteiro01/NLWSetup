@@ -34,5 +34,8 @@
       }
     },
     "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    }
   }
