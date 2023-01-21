@@ -1,6 +1,6 @@
 const form = document.querySelector("#form-habits")
 const nlwSetup = new NLWSetup(form)
-const button = document.querySelector('header button')
+const button = document.querySelector("header button")
 
 button.addEventListener("click", add)
 form.addEventListener("change", save)
@@ -15,6 +15,7 @@ function add(){
 //mas se não existir o dia add o registro. 
   if(dayExists){
     alert("Dia já registrado 🛑")
+    return
   }
 
   //Add o dia.
@@ -25,6 +26,6 @@ function add(){
 function save(){
   localStorage.setItem("NLWSetup@habits", JSON.stringify(nlwSetup.data))//Salavando as alterações e Json passando em formato de String.
 }
-// const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}//Pegando as informações do localStorage, transformando em objeto e guardando no const data.
-//  nlwSetup.setData(data)// Se existir um objeto o data está esperando
-//  nlwSetup.load()// Carrega as informações.
+ const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}//Pegando as informações do localStorage, transformando em objeto e guardando no const data.
+  nlwSetup.setData(data)// Se existir um objeto o data está esperando
+  nlwSetup.load()// Carrega as informações.
